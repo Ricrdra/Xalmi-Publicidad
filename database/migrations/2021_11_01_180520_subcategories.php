@@ -13,16 +13,25 @@ class Subcategories extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('subcategories',
+            function (Blueprint $table) {
+                $table->id();
+                $table->string('description');
+
+
+                $table->unsignedBigInteger('category_id')->unsigned();
+                $table->foreign('category_id')->references('id')->on('categories');
+            });
     }
 
     /**
+     * /**
      * Reverse the migrations.
      *
      * @return void
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('subcategories');
     }
 }
