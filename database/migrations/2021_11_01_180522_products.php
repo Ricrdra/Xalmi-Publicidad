@@ -24,8 +24,8 @@ class Products extends Migration
 
 
                 //Foreign Keys
-                $table->unsignedBigInteger('subcategory_id')->unsigned();
-                $table->foreign('subcategory_id')->references('id')->on('subcategories');
+                $table->unsignedBigInteger('category_id')->unsigned();
+                $table->foreign('category_id')->references('id')->on('categories');
             });
     }
 

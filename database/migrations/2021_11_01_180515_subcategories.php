@@ -17,10 +17,6 @@ class Subcategories extends Migration
             function (Blueprint $table) {
                 $table->id();
                 $table->string('description');
-
-
-                $table->unsignedBigInteger('category_id')->unsigned();
-                $table->foreign('category_id')->references('id')->on('categories');
             });
     }
 
