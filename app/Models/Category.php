@@ -14,9 +14,7 @@ class Category extends Model
 
     function products(): Relations\BelongsToMany
     {
-
         return $this->belongsToMany(Product::class);
-
     }
 
     function subcategory(): Relations\HasOne

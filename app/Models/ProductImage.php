@@ -10,4 +10,9 @@ class ProductImage extends Model
     public $timestamps = false;
 
     use HasFactory;
+
+    public function product(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Product::class);
+    }
 }
