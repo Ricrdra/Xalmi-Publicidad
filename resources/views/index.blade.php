@@ -2,17 +2,17 @@
 
 @section('content')
 
-<div class="container-fluid">
+<div class="container-fluid ">
    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
       </ol>
-      <div class="carousel-inner">
+      <div class="carousel-inner" style="border-radius: 20px;">
          <div class="carousel-item active">
             <img
-               src="https://lh3.googleusercontent.com/proxy/VMURPEqo4SWYWMPmQBPFsSu2cq8yGKnptjNeEQN_Ra_hhD7Q-Uz4QbLX1YQNIowTVZhYMW3ZvS-liBHRh1edNeKzaWB_XhXwUK61PTjt5mROVy7HV4KlOKf4ubTl7c5cmOWYtA"
+               src="https://www.capgemini.com/es-es/wp-content/uploads/sites/16/2019/01/The-smart-Digital-StoreBanner-900x300-V2-ST00-10.jpg?w=900"
                class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                <h5>First slide label</h5>
@@ -21,7 +21,7 @@
          </div>
          <div class="carousel-item">
             <img
-               src="https://lh3.googleusercontent.com/proxy/VMURPEqo4SWYWMPmQBPFsSu2cq8yGKnptjNeEQN_Ra_hhD7Q-Uz4QbLX1YQNIowTVZhYMW3ZvS-liBHRh1edNeKzaWB_XhXwUK61PTjt5mROVy7HV4KlOKf4ubTl7c5cmOWYtA"
+               src="https://www.capgemini.com/es-es/wp-content/uploads/sites/16/2019/01/The-smart-Digital-StoreBanner-900x300-V2-ST00-10.jpg?w=900"
                class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                <h5>Second slide label</h5>
@@ -30,7 +30,7 @@
          </div>
          <div class="carousel-item">
             <img
-               src="https://lh3.googleusercontent.com/proxy/VMURPEqo4SWYWMPmQBPFsSu2cq8yGKnptjNeEQN_Ra_hhD7Q-Uz4QbLX1YQNIowTVZhYMW3ZvS-liBHRh1edNeKzaWB_XhXwUK61PTjt5mROVy7HV4KlOKf4ubTl7c5cmOWYtA"
+               src="https://www.capgemini.com/es-es/wp-content/uploads/sites/16/2019/01/The-smart-Digital-StoreBanner-900x300-V2-ST00-10.jpg?w=900"
                class="d-block w-100" alt="...">
             <div class="carousel-caption d-none d-md-block">
                <h5>Third slide label</h5>
@@ -51,27 +51,27 @@
 
 
 
-<div class="container ">
+<div class="container ml-1 ">
    <div class=" row d-flex flex-wrap p-3 justify-content-center">
-      <div class="card p-2 col-12  col-sm-3  mr-3 mb-3  " style="width: 18rem;">
+      <div class="card p-2 col-sm  " style="width: 18rem;">
          <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
          <div class="card-body">
            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
          </div>
        </div>
-       <div class="card p-2 col-12  col-sm-3  mr-3 mb-3 " style="width: 18rem;">
+       <div class="card p-2 col-sm " style="width: 18rem;">
          <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
          <div class="card-body">
            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
          </div>
        </div>
-       <div class="card p-2 col-12  col-sm-3  mr-3 mb-3  " style="width: 18rem;">
+       <div class="card p-2 col-sm  " style="width: 18rem;">
          <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
          <div class="card-body">
            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
          </div>
        </div>
-       <div class="card p-2 col-12  col-sm-3 mr-3 mb-3  " style="width: 18rem;">
+       <div class="card p-2 col-sm  " style="width: 18rem;">
          <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
          <div class="card-body">
            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
