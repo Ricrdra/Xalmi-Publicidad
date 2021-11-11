@@ -51,32 +51,48 @@
 
 
 
-<div class="container ml-1 ">
-   <div class=" row d-flex flex-wrap p-3 justify-content-center">
-      <div class="card p-2 col-sm  " style="width: 18rem;">
-         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
+<div class="container-fluid ml-1  d-flex flex-wrap p-3 justify-content-center ">
+   <div class=" row d-flex flex-wrap p-3 justify-content-center ">
+      <div class="card p-2 d-flex justify-content-center col-sm  " style="width: 18rem;">
+         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091"
+            class="card-img-top" alt="...">
          <div class="card-body">
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
          </div>
-       </div>
-       <div class="card p-2 col-sm " style="width: 18rem;">
-         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
+      </div>
+      <div class="card p-2 d-flex justify-content-center col-sm " style="width: 18rem;">
+         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091"
+            class="card-img-top" alt="...">
          <div class="card-body">
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
          </div>
-       </div>
-       <div class="card p-2 col-sm  " style="width: 18rem;">
-         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
+      </div>
+      <div class="card p-2 d-flex justify-content-center col-sm  " style="width: 18rem;">
+         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091"
+            class="card-img-top" alt="...">
          <div class="card-body">
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
          </div>
-       </div>
-       <div class="card p-2 col-sm  " style="width: 18rem;">
-         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091" class="card-img-top" alt="...">
+      </div>
+      <div class="card p-2 d-flex justify-content-center col-sm  " style="width: 18rem;">
+         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091"
+            class="card-img-top" alt="...">
          <div class="card-body">
-           <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
          </div>
-       </div>
+      </div>
+      <div class="card p-2 d-flex justify-content-center col-sm  " style="width: 18rem;">
+         <img src="https://cdn.shopify.com/s/files/1/0012/7818/1440/products/Lobo3D-min_1800x1800.jpg?v=1601746091"
+            class="card-img-top" alt="...">
+         <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+               content.</p>
+         </div>
+      </div>
 
 
    </div>
