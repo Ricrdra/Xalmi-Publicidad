@@ -9,6 +9,10 @@
 
 body {
     background-color: $webcolor;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .bg-webcolor {
@@ -31,16 +35,24 @@ body {
 .card {
     background-color: $webcolor2;
     border-radius: 20px;
+    margin: 20px 20px;
+    padding: 20px;
+    border: none;
+  
+    
 
 }
 .card:hover{
     box-shadow: 0 8px 32px 0 rgba( 0, 0, 0, 0.37 );
 }
 .card img{
-    border-radius: 20px;
+    border-radius: 15px;
+    
+   
 }
 .card-body{
     color:white;
+    padding: 5px;
 }
 .wasa {
     background-repeat: no-repeat;
@@ -55,4 +67,20 @@ body {
 
 .fa::before {
     color: #25d366;
+}
+
+.dropdown-menu{
+    border-radius: 20px;
+    padding:10px 20px 10px 10px;
+    
+}
+.dropdown-item{
+    border-radius: 20px;
+    margin: 5px;
+}
+
+
+.foot{
+    border-radius: 20px;
+    padding: 20px;
 }

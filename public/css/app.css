@@ -10021,6 +10021,10 @@ h3 {
 }
 body {
   background-color: #0C8195;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .bg-webcolor {
@@ -10044,6 +10048,9 @@ body {
 .card {
   background-color: #0b899d;
   border-radius: 20px;
+  margin: 20px 20px;
+  padding: 20px;
+  border: none;
 }
 
 .card:hover {
@@ -10051,11 +10058,12 @@ body {
 }
 
 .card img {
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .card-body {
   color: white;
+  padding: 5px;
 }
 
 .wasa {
@@ -10071,4 +10079,19 @@ body {
 
 .fa::before {
   color: #25d366;
+}
+
+.dropdown-menu {
+  border-radius: 20px;
+  padding: 10px 20px 10px 10px;
+}
+
+.dropdown-item {
+  border-radius: 20px;
+  margin: 5px;
+}
+
+.foot {
+  border-radius: 20px;
+  padding: 20px;
 }
