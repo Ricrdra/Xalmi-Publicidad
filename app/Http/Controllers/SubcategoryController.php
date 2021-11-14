@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Subcategory;
+use Illuminate\Support\Facades\DB;
 
 class SubcategoryController extends Controller
 {
@@ -13,7 +14,7 @@ class SubcategoryController extends Controller
      */
     public function index()
     {
-        $data = Subcategory::all();
+        $data = DB::table('subcategories')->paginate(15);
         return view('subcategory.index', compact('data'));
     }
 
@@ -69,14 +70,13 @@ class SubcategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {

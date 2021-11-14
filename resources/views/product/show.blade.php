@@ -11,7 +11,7 @@
     <li>
         <b>Images:</b>
         <ul>
-            @foreach ($data->productImg as $item)
+            @foreach ($data->images as $item)
 
                 <li>
                     <img src="{{$item->image}}" width="100">
