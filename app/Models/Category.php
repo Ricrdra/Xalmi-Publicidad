@@ -9,12 +9,11 @@ use Illuminate\Database\Eloquent\Relations;
 class Category extends Model
 {
     public $timestamps = false;
-
     use HasFactory;
 
-    function products(): Relations\BelongsToMany
+    function products(): Relations\HasMany
     {
-        return $this->belongsToMany(Product::class);
+        return $this->hasMany(Product::class, 'id', 'category_id');
     }
 
     function subcategory(): Relations\HasOne

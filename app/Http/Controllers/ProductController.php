@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Product;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -13,18 +14,17 @@ class ProductController extends Controller
      */
     public function index()
     {
-        $data = Product::all();
+        $data = DB::table('products')->paginate(15);
         return view('product.index', compact('data'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('product.create');
     }
 
     /**
@@ -41,31 +41,27 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int $id
-     * @return \Illuminate\Http\Response
      */
     public function show($id)
     {
-        //
+        $data = Product::find($id);
+
+        return view('product.show', compact('data'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param int $id
-     * @return \Illuminate\Http\Response
      */
     public function edit($id)
     {
-        //
+        return view('product.edit');
+
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param \Illuminate\Http\Request $request
-     * @param int $id
-     * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
@@ -76,10 +72,12 @@ class ProductController extends Controller
      * Remove the specified resource from storage.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(int $id)
     {
-        //
+        $product = Product::find($id);
+        $product->destroy();
+        return redirect()->route(g'product.index',
+            ["message" => "El product se ha eliminado correctamente"]);
     }
 }
