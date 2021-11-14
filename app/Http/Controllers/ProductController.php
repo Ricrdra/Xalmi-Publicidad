@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 use App\Models\Product;
 use Illuminate\Support\Facades\DB;
+use App\Http\Requests\ProductCreateRequest;
 
 class ProductController extends Controller
 {
@@ -24,18 +26,14 @@ class ProductController extends Controller
      */
     public function create()
     {
-        return view('product.create');
+        $data = Category::all();
+
+        return view('product.create', ["categories" => $data]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param \Illuminate\Http\Request $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function store(ProductCreateRequest $request)
     {
-        //
+
     }
 
     /**
@@ -65,19 +63,27 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $this->validate($request, [
+            'name' => 'string',
+            'price' => 'number',
+            'description' => 'string',
+            'image' => 'string',
+        ]);
+
+        $data = $request->all();
+        $data['image'] = $request->file('image')->store('images', 'public');
+        Product::find($id)->update($data);
+
+        return redirect()->route('productos.index')->with('success', 'Product actualizado correctamente.');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     */
-    public function destroy(int $id)
+    public function destroy(int $id): \Illuminate\Http\RedirectResponse
     {
         $product = Product::find($id);
-        $product->destroy();
-        return redirect()->route(g'product.index',
-            ["message" => "El product se ha eliminado correctamente"]);
+        foreach ($product->images as $image) {
+            $image->delete();
+        }
+        Product::destroy($id);
+        return redirect()->route('productos.index')->with('success', 'Producto eliminado correctamente.');
     }
 }

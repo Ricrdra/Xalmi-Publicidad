@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Category;
 use Illuminate\Validation\ValidationException;
+use Illuminate\Support\Facades\DB;
 
 class CategoryController extends Controller
 {
@@ -14,7 +15,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $data = Category::all();
+        $data = DB::table('categories')->paginate(15);
         return view('category.index', compact('data'));
     }
 
@@ -91,8 +92,12 @@ class CategoryController extends Controller
     public function destroy(int $id): \Illuminate\Http\RedirectResponse
     {
         $data = Category::find($id);
-        $data->delete();
 
+        foreach ($data->products as $product) {
+            $product->category = null;
+        }
+
+        $data->destroy();
         return redirect()->route('category.index')->with('success', 'Category deleted successfully');
     }
 }
