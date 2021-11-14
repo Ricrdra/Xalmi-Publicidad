@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Relations;
 class Category extends Model
 {
     public $timestamps = false;
-
     use HasFactory;
 
     function products(): Relations\BelongsToMany
