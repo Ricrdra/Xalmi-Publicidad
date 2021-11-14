@@ -11,12 +11,12 @@ class Product extends Model
 
     use HasFactory;
 
-    public function category(): \Illuminate\Database\Eloquent\Relations\HasOne
+    public function category(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
-        return $this->hasOne(Category::class);
+        return $this->belongsTo(Category::class);
     }
 
-    public function ProductImages(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function productImg(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(ProductImage::class);
     }
